@@ -1,30 +1,30 @@
-class PythonFunctions:
+class DataList:
     def __init__(self):
-        self.list = []
+        self.my_list = []
 
-    def addNumber(self, Anynumber) -> None:
-        self.list.append(Anynumber)
+    def add_number(self, number):
+        self.my_list.append(number)
 
-    def addString(self, str) -> None:
-        self.list.append(str)
+    def add_string(self, string):
+        self.my_list.append(string)
 
-    def addDictionary(self, dict) -> None:
-        self.list.extend(dict.items())
+    def add_dictionary(self, dictionary):
+        self.my_list.append(dictionary)
 
-    def addTuple(self, tuple) -> None:
-        self.list.extend(tuple)
+    def add_tuple(self, tup):
+        self.my_list.append(tup)
 
-    def __str__(self):
-        return str(print(self.list))
+    def to_tuple(self):
+        return tuple(self.my_list)
 
+my_data_list = DataList()
+my_data_list.add_number(7)
+my_data_list.add_string('Hello')
+my_data_list.add_dictionary({"Name": "Irma", 'age': 33})
+my_data_list.add_tuple((1, 2, 3))
 
-myObject = PythonFunctions()
-num = 2023
-string = 'Hello World!'
-dict = {'j': 'k', 'k': 'l'}
-tuple = (1, 2, 3, 4)
-myObject.addNumber(1)
-myObject.addString(string)
-myObject.addDictionary(dict)
-myObject.addTuple(tuple)
-print(myObject)
+# Convert the list to a tuple
+my_tuple = my_data_list.to_tuple()
+
+# Print the tuple
+print(my_tuple)
