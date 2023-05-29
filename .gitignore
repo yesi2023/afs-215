@@ -7,3 +7,6 @@ venv/
 # Ignore node_modules
 node_modules/
 
+# do not commit
+ IMG/
+ week1/.idea/
